@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140818162014) do
+ActiveRecord::Schema.define(version: 20140818163304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140818162014) do
   create_table "empties", force: true do |t|
     t.time    "time"
     t.integer "total"
-    t.integer "intersection_osm_id"
+    t.integer "intersection_osm"
   end
 
   create_table "intersections", primary_key: "osm", force: true do |t|
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140818162014) do
 
   create_table "streets", force: true do |t|
     t.string  "name"
-    t.integer "intersection_osm_id"
+    t.integer "intersection_osm"
   end
 
 end
