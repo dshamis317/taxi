@@ -1,8 +1,8 @@
 class CreateStreets < ActiveRecord::Migration
   def change
     create_table :streets do |t|
-
-      t.timestamps
+      t.string :name
+      t.references :intersection_osm
     end
   end
 end
