@@ -11,28 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140818163304) do
+ActiveRecord::Schema.define(version: 20140818182807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "empties", force: true do |t|
-    t.time    "time"
-    t.integer "total"
-    t.integer "intersection_osm"
+    t.string  "time"
+    t.integer "total",            limit: 8
+    t.integer "intersection_osm", limit: 8
   end
 
-  create_table "intersections", primary_key: "osm", force: true do |t|
+  create_table "intersections", id: false, force: true do |t|
     t.integer "pickups"
     t.integer "dropoffs"
-    t.decimal "latitude",   precision: 10, scale: 6
-    t.decimal "longitude",  precision: 10, scale: 6
-    t.integer "empties_id"
+    t.integer "osm",       limit: 8
+    t.float   "latitude"
+    t.float   "longitude"
   end
 
   create_table "streets", force: true do |t|
     t.string  "name"
-    t.integer "intersection_osm"
+    t.integer "intersection_osm", limit: 8
   end
 
 end
