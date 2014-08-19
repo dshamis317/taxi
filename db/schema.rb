@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140818182807) do
+ActiveRecord::Schema.define(version: 20140819141100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20140818182807) do
     t.integer "pickups"
     t.integer "dropoffs"
     t.integer "osm",       limit: 8
-    t.float   "latitude"
     t.float   "longitude"
+    t.float   "latitude"
   end
 
   create_table "streets", force: true do |t|
