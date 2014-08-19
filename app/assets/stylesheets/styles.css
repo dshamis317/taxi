@@ -1,8 +1,35 @@
+body {
+  background: url('../assets/taxi.jpg');
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h2, h4 {
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  margin: 0;
+}
+
 #map {
   height: 450px;
   width: 100%;
 }
 
 .manual_address {
+  width: 100%;
   display: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.manual_address input:last-child {
+  background-color: black;
+  color: yellow;
+  border: none;
+  margin-bottom: 5px;
 }

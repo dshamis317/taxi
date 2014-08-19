@@ -4,7 +4,7 @@ function initializers() {
   $('#here').on('click', function(e) {
     e.preventDefault();
     $('.manual_address').slideToggle();
-    $('h2').hide();
+    $('h2').slideToggle();
   })
 
   $('.manual_address').on('submit', function(e) {
