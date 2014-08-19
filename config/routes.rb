@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root 'maps#index'
-  post '/' => 'maps#search'
+  post '/' => 'maps#locations'
 end
