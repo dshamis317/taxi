@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 gem 'pry'
 gem 'pry-debugger'
+gem 'httparty'
+gem 'geokit-rails'
+gem 'gmaps4rails'
