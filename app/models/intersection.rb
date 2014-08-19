@@ -6,7 +6,7 @@ class Intersection < ActiveRecord::Base
   has_many :empties
 
   def self.query_intersections(latitude, longitude)
-    return Intersection.within(0.1, :origin => [latitude, longitude]).limit(8).pluck(:osm)
+    return Intersection.within(0.2, :origin => [latitude, longitude]).limit(8).pluck(:osm)
   end
 
   def self.sort_intersections_by_empty(osm_array)

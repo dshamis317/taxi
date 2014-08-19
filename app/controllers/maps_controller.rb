@@ -16,4 +16,10 @@ class MapsController < ApplicationController
 
     render :json => addresses.to_json
   end
+
+  def address
+    address = params[:address] + "New York, NY"
+    coordinates = Street.get_coordinates(address)
+    render :json => coordinates.to_json
+  end
 end
