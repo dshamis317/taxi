@@ -14,6 +14,9 @@ class Intersection < ActiveRecord::Base
       Empty.where('intersection_osm = ?', osm)
     end
     current_hour = Time.now.hour.to_s + ':00'
+    if current_hour.length < 5
+      current_hour = current_hour.prepend('0')
+    end
     empty_cab_hash = {}
     empties.each do |empty|
       empty.each do |cab|
