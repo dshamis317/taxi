@@ -39,7 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'pry'
-gem 'pry-debugger'
+gem 'pry-byebug'
 gem 'httparty'
 gem 'geokit-rails'
 gem 'gmaps4rails'
